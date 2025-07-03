@@ -45,7 +45,7 @@ h3 {
 LINK STYLE
 ------------------------------------------*/
 a {
-    color           : #fcbb3c;
+    color           : #41075ca2;
     text-decoration : none;
     transition      : all 0.3s ease 0s;
 }
@@ -84,8 +84,8 @@ GLOBAL BUTTON STYLE
 /*btn-primary*/
 .btn-primary {
     color: #fff;
-    background-color: #fcbb3c;
-    border-color: #fba90a;
+    background-color: #41075ca2;
+    border-color: #4416c4;
 }
 
 .btn-primary:hover, 
@@ -94,8 +94,8 @@ GLOBAL BUTTON STYLE
 .btn-primary:active, 
 .btn-primary.active, 
 .open>.dropdown-toggle.btn-primary {
-	color: #e89b04;
-	background: transparent;
+	color: #41075ca2;
+	background: #e0e0e0;
 	border: 2px solid #e0e0e0;
 }
 
@@ -131,15 +131,15 @@ GLOBAL BUTTON STYLE
 .btn-success:hover, 
 .btn-primary.active, 
 .btn-success.active {
-    background: transparent;
+    background: #e0e0e0;
     border: 2px solid #e0e0e0;
 }
 
 .btn-link {
-    color: #fcbb3c;
+    color: #41075ca2;
 }
 .btn-link:hover{
-    color: #e89b04;
+    color: #5b3bb4;
 }
 
 .btn:focus, 
@@ -254,7 +254,7 @@ blockquote::before {
     top: -14px;
     left: 26px;
     font-size: 36px;
-    color: #fcbb3c;
+    color: #41075ca2;
 }
 
 /* ----------------------------------------------------------------
@@ -268,7 +268,7 @@ Form Style
 }
 
 .form-control:focus {
-    border-color: #fcbb3c;
+    border-color: #41075ca2;
     box-shadow: none;
 }
 
@@ -419,7 +419,7 @@ NAVIGATION
 
 .navbar-default .navbar-nav>li>a:hover, 
 .navbar-default .navbar-nav>li>a:focus {
-    color: #fcbb3c;
+    color: #41075ca2;
     background-color: transparent;
 }
 
@@ -429,7 +429,7 @@ NAVIGATION
 .navbar-default .navbar-nav>.open>a, 
 .navbar-default .navbar-nav>.open>a:hover, 
 .navbar-default .navbar-nav>.open>a:focus {
-    color: #fcbb3c;
+    color: #41075ca2;
     background-color: transparent;
 }
 
@@ -448,7 +448,7 @@ NAVIGATION
 
 .navbar-default .navbar-toggle:hover, 
 .navbar-default .navbar-toggle:focus {
-    background-color: #fcbb3c;
+    background-color: #41075ca2;
     border: 2px solid transparent;
 }
 
@@ -459,12 +459,23 @@ NAVIGATION
 
 /*Logo*/
 h1.logo {
-
-    width: 100px;
-    height: auto;
-
+  display: flex;
+  align-items: center; /* verticalmente */
+  margin: 0;
 }
 
+.logo img {
+  height: 100px; /* aumenta o tamanho do logo */
+  width: auto; /* mantém proporção */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;     /* centraliza verticalmente */
+  justify-content: center; /* opcional: centraliza horizontalmente */
+  height: 100%;            /* garante uso da altura total do nav */
+  padding: 0;              /* evita deslocamento extra */
+}
 
 .content-wrapper {
     position: relative;
@@ -474,7 +485,25 @@ h1.logo {
     background: #fff;
     z-index: 100;
 }
+@media (min-width: 767px) {
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    height: 100px; /* altura igual ao logo */
+  }
 
+  .navbar-nav > li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-nav > li > a {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 100px; /* igual à altura do logo/nav */
+  }
+}
 
 /* ------------------------------------------------------------------
 INTRO SECTION
@@ -523,7 +552,7 @@ SERVICE WRAPPER
 }
 
 .service-wrapper .media-heading a:hover{
-    color: #fcbb3c;
+    color: #41075ca2;
 }
 
 
@@ -624,7 +653,7 @@ ADVANTAGES WRAPPER
 .nav-tabs > li.active > a:hover, 
 .nav-tabs > li.active > a:focus {
     color: #ffffff;
-    background: #fcbb3c;
+    background: #41075ca2;
     border: 0;
 }
 
@@ -781,8 +810,8 @@ TESTIMONIAL WRAPPER
     width: 22px;
     height: 7px;
     margin: 0 5px 0 0;
-    background-color: #fcbb3c;
-    border: 1px solid #fcbb3c;
+    background-color: #41075ca2;
+    border: 1px solid #41075ca2;
 }
 
 .testimonial-wrapper .carousel-indicators li {
@@ -806,7 +835,7 @@ TRUSTED CLIENT WRAPPER
 }
 
 ul.partner-logo {
-    margin-top: 40px;
+    margin-bottom: 50px;
     display: inline-block;
     text-align: center;
 }
@@ -873,7 +902,7 @@ SUBSCRIPTION PLANS WRAPPER
     line-height: 30px;
     font-weight: 700;
     margin: 30px 0;
-    color: #fcbb3c;
+    color: #41075ca2;
 }
 .price small {
     font-size: 14px;
@@ -931,7 +960,7 @@ FOOTER WIDGET WRAPPER
 .subcsribe-text::after{
     content: "";
     position: absolute;
-    background: #fcbb3c;
+    background: #41075ca2;
     width: 94px;
     height: 2px;
     left: 0;
@@ -971,8 +1000,6 @@ FOOTER WIDGET WRAPPER
     background-color: #fff;
 }
 
-
-.footer-widget ul {}
 .footer-widget ul li {
     line-height: 34px;
 }
@@ -1006,7 +1033,6 @@ SOCIAL LINK
 .social-link {
     margin-top: 40px;
 }
-.social-link ul{}
 .social-link ul li{
     display: inline-block;
     margin: 0 2px 0 0;
@@ -1220,7 +1246,6 @@ ABOUT US PAGE
 }
 
 
-ul.joblist-link {}
 ul.joblist-link li{
     margin-bottom: 8px;
 }
@@ -1246,8 +1271,6 @@ ul.joblist-link li a:hover{
     background-size: cover;
     padding: 60px;
 }
-.download-box {}
-.download-box ul{}
 .download-box ul li{
     padding: 0 10px 0 0;
     width: 32.8%;
@@ -1311,7 +1334,6 @@ ul.joblist-link li a:hover{
 /* ----------------------------------------------------------------
 ABOUT ME PAGE
 -------------------------------------------------------------------*/
-.info-in-short {}
 .info-in-short img{
     width: 100%;
 }
@@ -1343,7 +1365,6 @@ BLOG PAGE
     margin: 0 0 60px;
     border-bottom: 2px solid #e3e3e3;
 }
-.entry-header {}
 
 /*For Sticky Post*/
 .sticky .entry-header {
@@ -1365,7 +1386,6 @@ BLOG PAGE
     color: #b9b9b9;
     margin-bottom: 3px;
 }
-.blog-post-wrapper .entry-meta ul{}
 .blog-post-wrapper .entry-meta ul li{
     position: relative;
     padding-left: 12px;
@@ -1399,7 +1419,7 @@ BLOG PAGE
 .blog-post-wrapper .the-category a,
 .blog-post-wrapper .entry-meta ul li a:hover,
 .blog-post-wrapper .entry-title a:hover{
-    color: #fcbb3c !important;
+    color: #41075ca2 !important;
 }
 
 .blog-post-wrapper .post-thumbnail {
@@ -1417,7 +1437,7 @@ BLOG PAGE
 
 #blog-post-carousel .carousel-control:hover, 
 #blog-post-carousel .carousel-control:focus {
-    color: #fcbb3c;
+    color: #41075ca2;
     filter: alpha(opacity=100);
     opacity: 1;
 }
@@ -1539,7 +1559,7 @@ SINGLE BLOG
 .pagination>.active>span:hover, 
 .pagination>.active>a:focus, 
 .pagination>.active>span:focus {
-    color: #fcbb3c;
+    color: #41075ca2;
     background-color: transparent;
     border-color: transparent;
 }
@@ -1548,7 +1568,7 @@ SINGLE BLOG
 .pagination>li>span:hover, 
 .pagination>li>a:focus, 
 .pagination>li>span:focus {
-    color: #fcbb3c;
+    color: #41075ca2;
     background-color: transparent;
     border-color: transparent;
 }
@@ -1582,9 +1602,9 @@ SINGLE BLOG
 .pagination > li:first-child > span:hover,
 .pagination > li:last-child > a:hover, 
 .pagination > li:last-child > span:hover {
-    color: #fcbb3c;
+    color: #41075ca2;
     background-color: transparent;
-    border-color: #fcbb3c;
+    border-color: #41075ca2;
 }
 
 .pagination-wrap .counter {
@@ -1604,7 +1624,7 @@ SINGLE BLOG
 }
 .pager li>a:hover, 
 .pager li>a:focus {
-    background-color: #fcbb3c;
+    background-color: #41075ca2;
     color: #fff;
     border: 2px solid transparent;
 }
@@ -1619,7 +1639,6 @@ SINGLE BLOG
 
 /*BLOG SIDEBAR*/
 
-.sidebar-wrapper {}
 .sidebar-wrapper .widget{
     margin-bottom: 40px;
     border: 2px solid #e3e3e3;
@@ -1660,7 +1679,7 @@ SINGLE BLOG
     color: #6d6d6d;
 }
 .sidebar-wrapper .widget ul li a:hover {
-    color: #fcbb3c;
+    color: #41075ca2;
 }
 
 .sidebar-wrapper .widget.widget_search{
@@ -1673,7 +1692,7 @@ SINGLE BLOG
     color: #e3e3e3;
 }
 .widget_search form button:hover i{
-    color: #fcbb3c;
+    color: #41075ca2;
 }
 .widget_search form button:focus {
     outline: none;
@@ -1689,10 +1708,6 @@ SINGLE BLOG
     box-shadow: none;
     background: transparent;
 }
-
-
-.sidebar-tab ul li{}
-
 
 .widget.widget_tag_cloud ul {
     padding-bottom: 15px;
@@ -1779,7 +1794,7 @@ PORTFOLIO PAGE
 }
 #filter li a:hover,
 #filter li a.active {
-    background: #fcbb3c;
+    background: #41075ca2;
     border: 2px solid transparent;
     color: #fff;
 }
@@ -1851,15 +1866,15 @@ PORTFOLIO PAGE
 }
 .portfolio-links>a:hover {
     background: rgba(255,255,255,.3);
-    color: #fcbb3c;
+    color: #41075ca2;
     border: 2px solid transparent;
 }
 
 /*Portfolio Single Page*/
-.portfolio-content {}
+.portfolio-content {
 .portfolio-content img{
     margin-bottom: 30px;
-}
+}}
 .portfolio-info p {
     margin-bottom: 15px;
 }
@@ -1902,7 +1917,7 @@ PORTFOLIO PAGE
 
 .owl-theme .owl-controls .owl-page.active span, 
 .owl-theme .owl-controls.clickable .owl-page:hover span {
-    background: #fcbb3c;
+    background: #41075ca2;
 }
 
 
@@ -1933,7 +1948,7 @@ CONTACT US PAGE
     display: block;
 }
 .mini-contact a:hover {
-    color: #fcbb3c;
+    color: #41075ca2;
 }
 
 .map-wrapper {
@@ -1994,7 +2009,7 @@ Job Page
     font-family: FontAwesome;
     content: "\f192";
     font-size: 10px;
-    color: #fcbb3c;
+    color: #41075ca2;
     position: absolute;
     top: 3.5px;
     left: 0;
@@ -2103,7 +2118,7 @@ Typography Page
     font-size: 42px;
 }
 .typography-page-wrapper ul li:before {
-    color :#fcbb3c;;
+    color :#41075ca2;;
 }
 
 .typography-page-tab {
@@ -2140,11 +2155,24 @@ Offcanvas Style
 	background: #27272C;
 }
 .hippo-offcanvas-pusher::after{
-	z-index: 1200;
+	z-index: 99;
 }
 .offcanvas-menu{
 	left: -1000px;
 }
+
+
+.offcanvas-menu {
+    position: fixed; /* Garante que fique fixo na tela */
+    top: 0;
+    left: 0;
+    width: 300px; /* ou o tamanho desejado */
+    height: 100vh;
+    z-index: 9999; /* Alto o suficiente pra estar na frente de tudo */
+    background: #27272C; /* Fundo escuro ou como quiser */
+    transition: left 0.3s ease;
+}
+
 #off-canvas-close-btn{
 	padding: 0px 20px;
 	background: rgba(0, 0, 0, 0.3);
@@ -2155,7 +2183,7 @@ Offcanvas Style
 }
 #off-canvas-close-btn:hover,
 #off-canvas-close-btn:focus{
-	color: #fcbb3c;
+	color: #41075ca2;
 	outline: none;
 }
 .offcanvas-menu  h3{
@@ -2183,24 +2211,13 @@ Offcanvas Style
     padding-left: 30px;
 }
 
-.offcanvas-menu ul li:first-child a {
-
-}
-
 
 .offcanvas-menu ul li a:hover,
 .offcanvas-menu ul li.active a {
     background : rgba(0, 0, 0, 0.2);
     box-shadow : inset 0 -1px rgba(0, 0, 0, 0);
-    color      : #fcbb3c;
+    color      : #41075ca2;
 }
-
-
-
-
-
-
-
 
 /* ------------------------------------------------------------------
 BACK TO TOP
@@ -2214,8 +2231,6 @@ BACK TO TOP
     display: none;
     z-index: 9999;
 }
-
-
 
 /* ------------------------------------------------------------------
 DROPDOWN CSS
@@ -2244,14 +2259,14 @@ DROPDOWN CSS
 .nav.navbar-nav li ul.dropdown-menu li a:hover,
 .nav.navbar-nav li ul.dropdown-menu li a:focus{
     background  : transparent; 
-    color       : #fcbb3c
+    color       : #41075ca2
   }
 
 
 .dropdown-menu>.active>a, 
 .dropdown-menu>.active>a:hover, 
 .dropdown-menu>.active>a:focus {
-    color: #fcbb3c !important;
+    color: #41075ca2 !important;
     background-color: transparent;
 
 }
@@ -2437,7 +2452,7 @@ li.dropdown.menu-animating > .submenu-sub-wrapper {
 
 .hero-slide .carousel-caption .phone {
     font-size               : 30px;
-    color                   : #fcbb3c;
+    color                   : #ffffffa2;
     -webkit-animation-delay : 100ms;
     animation-delay         : 100ms;
     }

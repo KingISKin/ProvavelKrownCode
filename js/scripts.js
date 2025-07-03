@@ -114,7 +114,7 @@ jQuery(function ($) {
         documentWrapper: '#st-container',
         contentWrapper : '.st-content',
         position       : 'hippo-offcanvas-left',    // class name
-        // opener         : 'st-menu-open',            // class name
+        opener         : 'st-menu-open',            // class name
         effect         : 'slide-in-on-top',             // class name
         closeButton    : '#off-canvas-close-btn',
         menuWrapper    : '.offcanvas-menu',                 // class name below-pusher

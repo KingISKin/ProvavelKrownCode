@@ -40,7 +40,7 @@
  * */
 
 
-;
+
 (function ($) {
     $.fn.extend({
         HippoOffCanvasMenu: function (options) {
@@ -48,7 +48,7 @@
             this.defaultOptions = {
                 documentWrapper: '.hippo-offcanvas-wrapper',
                 position       : 'hippo-offcanvas-left', // class name
-                //opener         : 'hippo-offcanvas-open', // class name
+                opener         : 'hippo-offcanvas-open', // class name
                 effect         : 'slide-on-top',         // class name
                 contentWrapper : '.hippo-offcanvas-contents',
                 closeButton    : '.hippo-offcanvas-close',

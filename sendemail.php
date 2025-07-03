@@ -6,7 +6,7 @@
     header( 'Content-type: application/json' );
 
 
-    $to         = 'niamul@themerox.com'; //put your email here
+    $to         = 'comercial@leiturify.com'; //put your email here
 
     $email_template = 'simple.html';
 
